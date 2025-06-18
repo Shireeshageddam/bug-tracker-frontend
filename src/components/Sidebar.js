@@ -23,8 +23,13 @@ export default function Sidebar({ isMobile = false, onClose }) {
   const navItems = [
     { name: 'Dashboard', icon: <LayoutDashboard size={18} />, path: '/dashboard' },
     { name: 'Projects', icon: <FolderKanban size={18} />, path: '/projects' },
+    { name: 'My Tickets', icon: <Bug size={18} />, path: '/my-tickets' },
     { name: 'New Project', icon: <Plus size={18} />, path: '/projects/new' },
+    
+    
   ];
+
+ 
 
   // ✅ Ticket links only if projectId is found
   if (projectId) {

@@ -21,6 +21,7 @@ import ResetPassword from './pages/ResetPassword';
 import EditTicket from './pages/EditTicket';
 import KanbanBoard from './pages/KanbanBoard';
 import TicketDetails from './pages/TicketDetails';
+import MyTickets from './pages/MyTickets';
 
 import Layout from './components/Layout';
 
@@ -67,6 +68,8 @@ function App() {
         <Route path="/projects/:projectId/kanban" element={<ProtectedRoute><Layout><KanbanBoard /></Layout></ProtectedRoute>} />
 
         <Route path="/projects/:projectId/tickets/:ticketId" element={<ProtectedRoute><Layout><TicketDetails /></Layout></ProtectedRoute>} />
+
+        <Route path="/my-tickets" element={<ProtectedRoute><Layout><MyTickets /></Layout></ProtectedRoute>} />
         
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
